@@ -4,7 +4,7 @@ import type { SliceComponentProps } from '@prismicio/react';
 import { PrismicNextImage } from '@prismicio/next';
 import clsx from 'clsx';
 
-import { Bounded } from '@/components/Bounded';
+import { Bounded } from '@/ui/Bounded';
 
 type ImageProps = SliceComponentProps<Content.ImageSlice>;
 

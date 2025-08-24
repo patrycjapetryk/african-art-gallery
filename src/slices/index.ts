@@ -3,10 +3,13 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  footer: dynamic(() => import("./Footer")),
   hero: dynamic(() => import("./Hero")),
   image: dynamic(() => import("./Image")),
   image_cards: dynamic(() => import("./ImageCards")),
+  news: dynamic(() => import("./News")),
   quote: dynamic(() => import("./Quote")),
+  slider: dynamic(() => import("./Slider")),
   text: dynamic(() => import("./Text")),
   text_with_image: dynamic(() => import("./TextWithImage")),
 };

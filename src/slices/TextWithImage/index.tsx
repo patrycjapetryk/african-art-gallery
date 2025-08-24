@@ -3,8 +3,8 @@ import { type Content, isFilled } from '@prismicio/client';
 import type { SliceComponentProps } from '@prismicio/react';
 import { PrismicNextImage, PrismicNextLink } from '@prismicio/next';
 
-import { Bounded } from '@/components/Bounded';
-import { PrismicRichText } from '@/components/PrismicRichText';
+import { Bounded } from '@/ui/Bounded';
+import { PrismicRichText } from '@/ui/PrismicRichText';
 
 type TextWithImageProps = SliceComponentProps<Content.TextWithImageSlice>;
 

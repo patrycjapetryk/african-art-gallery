@@ -3,10 +3,10 @@ import { type Content, isFilled } from '@prismicio/client';
 import { PrismicText, type SliceComponentProps } from '@prismicio/react';
 import { PrismicNextLink, PrismicNextImage } from '@prismicio/next';
 
-import { Bounded } from '@/components/Bounded';
-import { Heading } from '@/components/Heading';
-import { ConditionalWrap } from '@/components/ConditionalWrap';
-import { PrismicRichText } from '@/components/PrismicRichText';
+import { Bounded } from '@/ui/Bounded';
+import { Heading } from '@/ui/Heading';
+import { ConditionalWrap } from '@/ui/ConditionalWrap';
+import { PrismicRichText } from '@/ui/PrismicRichText';
 
 type ImageCardProps = {
   card: Content.ImageCardsSliceDefaultPrimaryCardsItem;

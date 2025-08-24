@@ -1,0 +1,46 @@
+{
+  "format": "custom",
+  "id": "social_media_navigation",
+  "label": "Social media navigation",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "navigation_item": {
+        "type": "Group",
+        "config": {
+          "label": "Navigation item",
+          "repeat": true,
+          "fields": {
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "Label",
+                "placeholder": ""
+              }
+            },
+            "icon": {
+              "type": "Image",
+              "config": {
+                "label": "Icon",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": true,
+                "allowText": false,
+                "repeat": false
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

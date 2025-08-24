@@ -3,4 +3,6 @@
 @theme {
   --font-sans: var(--font-univers), sans-serif;
   --font-serif: var(--font-ivymode), serif;
+
+  --text-sm: 0.87rem;
 }
