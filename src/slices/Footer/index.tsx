@@ -1,50 +1,55 @@
-import { FC } from "react";
-import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { FC } from 'react';
+import { type Content } from '@prismicio/client';
+import { SliceComponentProps } from '@prismicio/react';
 
-/**
- * Props for `Footer`.
- */
+import { Heading } from '@/ui/Heading';
+import { Bounded } from '@/ui/Bounded';
+
 export type FooterProps = SliceComponentProps<Content.FooterSlice>;
 
-/**
- * Component for "Footer" Slices.
- */
 const Footer: FC<FooterProps> = ({ slice }) => {
+  const phone = slice.primary.phone[0];
+  const email = slice.primary.email[0];
+  const address = slice.primary.address[0];
+  const socialMedia = slice.primary.socialMedia[0];
+  const openingHours = slice.primary.openingHours[0];
+
   return (
-    <section
-      data-slice-type={slice.slice_type}
-      data-slice-variation={slice.variation}
-    >
-      Placeholder component for footer (variation: {slice.variation}) slices.
-      <br />
-      <strong>You can edit this slice directly in your code editor.</strong>
-      {/**
-       * 💡 Use Prismic MCP with your code editor
-       *
-       * Get AI-powered help to build your slice components — based on your actual model.
-       *
-       * ▶️ Setup:
-       * 1. Add a new MCP Server in your code editor:
-       *
-       * {
-       *   "mcpServers": {
-       *     "Prismic MCP": {
-       *       "command": "npx",
-       *       "args": ["-y", "@prismicio/mcp-server"]
-       *     }
-       *   }
-       * }
-       *
-       * 2. Select Claude 3.7 Sonnet (recommended for optimal output)
-       *
-       * ✅ Then open your slice file and ask your code editor:
-       *    "Code this slice"
-       *
-       * Your code editor reads your slice model and helps you code faster ⚡
-       * 📚 Give your feedback: https://community.prismic.io/t/help-us-shape-the-future-of-slice-creation/19505
-       */}
-    </section>
+    <Bounded as='footer' yPadding='lg' className='mt-24'>
+      <ul className='grid md:grid-cols-5 gap-4 md:text-xs'>
+        <li>
+          <Heading as='h3' size='xs' className='mb-2'>
+            {phone?.title || ''}
+          </Heading>
+          <p>{phone?.text || ''}</p>
+        </li>
+        <li>
+          <Heading as='h3' size='xs' className='mb-2'>
+            {email?.title || ''}
+          </Heading>
+          {email?.text && <a href={`mailto:${email?.text}`}>{email?.text}</a>}
+        </li>
+        <li>
+          <Heading as='h3' size='xs' className='mb-2'>
+            {address?.title || ''}
+          </Heading>
+          <p>{address?.address1 || ''}</p>
+          <p>{address?.address2 || ''}</p>
+        </li>
+        <li>
+          <Heading as='h3' size='xs' className='mb-2'>
+            {socialMedia?.title || ''}
+          </Heading>
+        </li>
+        <li>
+          <Heading as='h3' size='xs' className='mb-2'>
+            {openingHours?.title}
+          </Heading>
+          <p>{openingHours?.hours1 || ''}</p>
+          <p>{openingHours?.hours2 || ''}</p>
+        </li>
+      </ul>
+    </Bounded>
   );
 };
 

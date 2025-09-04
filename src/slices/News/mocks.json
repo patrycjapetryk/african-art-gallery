@@ -15,33 +15,8 @@
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"tag",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "meat",
-									"type": "Text"
-								}
-							],
-							[
-								"title",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "tax",
-									"type": "Text"
-								}
-							],
-							[
-								"cta",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "salt",
-									"type": "Text"
-								}
-							],
-							[
 								"image",
 								{
-									"__TYPE__": "ImageContent",
 									"origin": {
 										"id": "main",
 										"url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
@@ -60,12 +35,51 @@
 										"background": "transparent"
 									},
 									"alt": "belt",
+									"credits": null,
+									"__TYPE__": "ImageContent",
 									"thumbnails": {}
+								}
+							],
+							[
+								"text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "composition",
+									"type": "Text"
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "board",
+									"type": "Text"
+								}
+							],
+							[
+								"link",
+								{
+									"key": "3554f80d-39dc-41df-afbf-db84935ff878",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io",
+										"text": "explain"
+									}
 								}
 							]
 						]
 					}
 				]
+			},
+			"link": {
+				"__TYPE__": "LinkContent",
+				"key": "eb50d5b3-87cb-48f9-bc6a-7ed70b86c4e3",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "spin"
+				}
 			}
 		},
 		"items": []

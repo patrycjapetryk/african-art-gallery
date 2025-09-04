@@ -25,13 +25,6 @@
             "label": "News",
             "repeat": true,
             "fields": {
-              "tag": {
-                "type": "Text",
-                "config": {
-                  "label": "Tag",
-                  "placeholder": ""
-                }
-              },
               "title": {
                 "type": "Text",
                 "config": {
@@ -39,10 +32,10 @@
                   "placeholder": ""
                 }
               },
-              "cta": {
+              "text": {
                 "type": "Text",
                 "config": {
-                  "label": "CTA",
+                  "label": "Text",
                   "placeholder": ""
                 }
               },
@@ -53,8 +46,30 @@
                   "constraint": {},
                   "thumbnails": []
                 }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
+                }
               }
             }
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": false,
+            "allowText": true,
+            "repeat": false
           }
         }
       },

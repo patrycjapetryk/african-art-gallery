@@ -96,6 +96,7 @@ export type NavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | ExhibitionSlice
   | NewsSlice
   | SliderSlice
   | HeroSlice
@@ -295,23 +296,355 @@ export type AllDocumentTypes =
   | SocialMediaNavigationDocument;
 
 /**
- * Item in *Footer → Default → Primary → Text*
+ * Primary content in *Background → Default → Primary*
  */
-export interface FooterSliceDefaultPrimaryTextItem {}
+export interface BackgroundSliceDefaultPrimary {
+  /**
+   * Background color field in *Background → Default → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: background.default.primary.backgroundColor
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  backgroundColor: prismic.ColorField;
+
+  /**
+   * Background Image field in *Background → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: background.default.primary.backgroundImage
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  backgroundImage: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Background Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BackgroundSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<BackgroundSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Background*
+ */
+type BackgroundSliceVariation = BackgroundSliceDefault;
+
+/**
+ * Background Shared Slice
+ *
+ * - **API ID**: `background`
+ * - **Description**: Background
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BackgroundSlice = prismic.SharedSlice<
+  "background",
+  BackgroundSliceVariation
+>;
+
+/**
+ * Primary content in *Exhibition → Default → Primary*
+ */
+export interface ExhibitionSliceDefaultPrimary {
+  /**
+   * Title field in *Exhibition → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibition.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Name field in *Exhibition → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibition.default.primary.name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Date field in *Exhibition → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibition.default.primary.date
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  date: prismic.KeyTextField;
+
+  /**
+   * Button Link field in *Exhibition → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibition.default.primary.buttonLink
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  buttonLink: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * Background Image field in *Exhibition → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibition.default.primary.backgroundImage
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  backgroundImage: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Exhibition Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ExhibitionSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ExhibitionSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Exhibition*
+ */
+type ExhibitionSliceVariation = ExhibitionSliceDefault;
+
+/**
+ * Exhibition Shared Slice
+ *
+ * - **API ID**: `exhibition`
+ * - **Description**: Exhibition
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ExhibitionSlice = prismic.SharedSlice<
+  "exhibition",
+  ExhibitionSliceVariation
+>;
+
+/**
+ * Item in *Footer → Default → Primary → Phone*
+ */
+export interface FooterSliceDefaultPrimaryPhoneItem {
+  /**
+   * Title field in *Footer → Default → Primary → Phone*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.phone[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Text field in *Footer → Default → Primary → Phone*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.phone[].text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Footer → Default → Primary → Email*
+ */
+export interface FooterSliceDefaultPrimaryEmailItem {
+  /**
+   * Title field in *Footer → Default → Primary → Email*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.email[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Text field in *Footer → Default → Primary → Email*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.email[].text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Footer → Default → Primary → Address*
+ */
+export interface FooterSliceDefaultPrimaryAddressItem {
+  /**
+   * Title field in *Footer → Default → Primary → Address*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.address[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Address1 field in *Footer → Default → Primary → Address*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.address[].address1
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  address1: prismic.KeyTextField;
+
+  /**
+   * Address2 field in *Footer → Default → Primary → Address*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.address[].address2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  address2: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Footer → Default → Primary → Social media*
+ */
+export interface FooterSliceDefaultPrimarySocialMediaItem {
+  /**
+   * Title field in *Footer → Default → Primary → Social media*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.socialMedia[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Link field in *Footer → Default → Primary → Social media*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.socialMedia[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.Repeatable<
+    prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+  >;
+}
+
+/**
+ * Item in *Footer → Default → Primary → Opening hours*
+ */
+export interface FooterSliceDefaultPrimaryOpeningHoursItem {
+  /**
+   * Title field in *Footer → Default → Primary → Opening hours*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.openingHours[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Hours1 field in *Footer → Default → Primary → Opening hours*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.openingHours[].hours1
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  hours1: prismic.KeyTextField;
+
+  /**
+   * Hours2 field in *Footer → Default → Primary → Opening hours*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.openingHours[].hours2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  hours2: prismic.KeyTextField;
+}
 
 /**
  * Primary content in *Footer → Default → Primary*
  */
 export interface FooterSliceDefaultPrimary {
   /**
-   * Text field in *Footer → Default → Primary*
+   * Phone field in *Footer → Default → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: footer.default.primary.text[]
+   * - **API ID Path**: footer.default.primary.phone[]
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  text: prismic.GroupField<Simplify<FooterSliceDefaultPrimaryTextItem>>;
+  phone: prismic.GroupField<Simplify<FooterSliceDefaultPrimaryPhoneItem>>;
+
+  /**
+   * Email field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.email[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  email: prismic.GroupField<Simplify<FooterSliceDefaultPrimaryEmailItem>>;
+
+  /**
+   * Address field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.address[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  address: prismic.GroupField<Simplify<FooterSliceDefaultPrimaryAddressItem>>;
+
+  /**
+   * Social media field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.socialMedia[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  socialMedia: prismic.GroupField<
+    Simplify<FooterSliceDefaultPrimarySocialMediaItem>
+  >;
+
+  /**
+   * Opening hours field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.openingHours[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  openingHours: prismic.GroupField<
+    Simplify<FooterSliceDefaultPrimaryOpeningHoursItem>
+  >;
 }
 
 /**
@@ -346,14 +679,14 @@ export type FooterSlice = prismic.SharedSlice<"footer", FooterSliceVariation>;
  */
 export interface HeroSliceDefaultPrimary {
   /**
-   * Text field in *Hero → Default → Primary*
+   * Title field in *Hero → Default → Primary*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.text
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **API ID Path**: hero.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  text: prismic.RichTextField;
+  title: prismic.KeyTextField;
 
   /**
    * Button Link field in *Hero → Default → Primary*
@@ -390,6 +723,16 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   backgroundImage: prismic.ImageField<never>;
+
+  /**
+   * Text field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
 }
 
 /**
@@ -641,16 +984,6 @@ export type ImageCardsSlice = prismic.SharedSlice<
  */
 export interface NewsSliceDefaultPrimaryNewsItem {
   /**
-   * Tag field in *News → Default → Primary → News*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: news.default.primary.news[].tag
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  tag: prismic.KeyTextField;
-
-  /**
    * Title field in *News → Default → Primary → News*
    *
    * - **Field Type**: Text
@@ -661,14 +994,14 @@ export interface NewsSliceDefaultPrimaryNewsItem {
   title: prismic.KeyTextField;
 
   /**
-   * CTA field in *News → Default → Primary → News*
+   * Text field in *News → Default → Primary → News*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: news.default.primary.news[].cta
+   * - **API ID Path**: news.default.primary.news[].text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  cta: prismic.KeyTextField;
+  text: prismic.KeyTextField;
 
   /**
    * Image field in *News → Default → Primary → News*
@@ -679,6 +1012,16 @@ export interface NewsSliceDefaultPrimaryNewsItem {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
+
+  /**
+   * Link field in *News → Default → Primary → News*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.default.primary.news[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -704,6 +1047,16 @@ export interface NewsSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   news: prismic.GroupField<Simplify<NewsSliceDefaultPrimaryNewsItem>>;
+
+  /**
+   * Link field in *News → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.default.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -1114,8 +1467,20 @@ declare module "@prismicio/client" {
       SocialMediaNavigationDocumentData,
       SocialMediaNavigationDocumentDataNavigationItemItem,
       AllDocumentTypes,
+      BackgroundSlice,
+      BackgroundSliceDefaultPrimary,
+      BackgroundSliceVariation,
+      BackgroundSliceDefault,
+      ExhibitionSlice,
+      ExhibitionSliceDefaultPrimary,
+      ExhibitionSliceVariation,
+      ExhibitionSliceDefault,
       FooterSlice,
-      FooterSliceDefaultPrimaryTextItem,
+      FooterSliceDefaultPrimaryPhoneItem,
+      FooterSliceDefaultPrimaryEmailItem,
+      FooterSliceDefaultPrimaryAddressItem,
+      FooterSliceDefaultPrimarySocialMediaItem,
+      FooterSliceDefaultPrimaryOpeningHoursItem,
       FooterSliceDefaultPrimary,
       FooterSliceVariation,
       FooterSliceDefault,

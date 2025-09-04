@@ -12,12 +12,137 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "text": {
+        "phone": {
           "type": "Group",
           "config": {
-            "label": "Text",
-            "repeat": true,
-            "fields": {}
+            "label": "Phone",
+            "repeat": false,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "text": {
+                "type": "Text",
+                "config": {
+                  "label": "Text",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "email": {
+          "type": "Group",
+          "config": {
+            "label": "Email",
+            "repeat": false,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "text": {
+                "type": "Text",
+                "config": {
+                  "label": "Text",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "address": {
+          "type": "Group",
+          "config": {
+            "label": "Address",
+            "repeat": false,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "address1": {
+                "type": "Text",
+                "config": {
+                  "label": "Address1",
+                  "placeholder": ""
+                }
+              },
+              "address2": {
+                "type": "Text",
+                "config": {
+                  "label": "Address2",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "socialMedia": {
+          "type": "Group",
+          "config": {
+            "label": "Social media",
+            "repeat": false,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": true
+                }
+              }
+            }
+          }
+        },
+        "openingHours": {
+          "type": "Group",
+          "config": {
+            "label": "Opening hours",
+            "repeat": false,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "hours1": {
+                "type": "Text",
+                "config": {
+                  "label": "Hours1",
+                  "placeholder": ""
+                }
+              },
+              "hours2": {
+                "type": "Text",
+                "config": {
+                  "label": "Hours2",
+                  "placeholder": ""
+                }
+              }
+            }
           }
         }
       },

@@ -3,12 +3,159 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"text": {
+			"address": {
 				"__TYPE__": "GroupContentType",
 				"value": [
 					{
 						"__TYPE__": "GroupItemContent",
-						"value": []
+						"value": [
+							[
+								"address1",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "minute",
+									"type": "Text"
+								}
+							],
+							[
+								"address2",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "stone",
+									"type": "Text"
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "sister",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"socialMedia": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"link",
+								{
+									"__TYPE__": "RepeatableContent",
+									"type": "Link",
+									"value": [
+										{
+											"key": "b8ff9ac4-18d3-4f31-ba25-c0024838aee6",
+											"__TYPE__": "LinkContent",
+											"value": {
+												"__TYPE__": "ExternalLink",
+												"url": "http://google.com",
+												"text": "mile"
+											}
+										}
+									]
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "differ",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"phone": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "colony",
+									"type": "Text"
+								}
+							],
+							[
+								"text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "salmon",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"email": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "captured",
+									"type": "Text"
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "happened",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"openingHours": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"hours1",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "sing",
+									"type": "Text"
+								}
+							],
+							[
+								"hours2",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "dear",
+									"type": "Text"
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "sheet",
+									"type": "Text"
+								}
+							]
+						]
 					}
 				]
 			}

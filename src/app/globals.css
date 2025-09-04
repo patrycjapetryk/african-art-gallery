@@ -4,5 +4,8 @@
   --font-sans: var(--font-univers), sans-serif;
   --font-serif: var(--font-ivymode), serif;
 
+  --color-aag-beige: #faf8f4;
+  --color-aag-black: #191919;
+
   --text-sm: 0.87rem;
 }

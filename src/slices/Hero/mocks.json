@@ -3,41 +3,15 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"text": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading1",
-						"content": {
-							"text": "Steel",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Laboris adipisicing est duis in laboris in officia Lorem officia enim culpa consequat sint ut proident.",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
-			},
 			"buttonLink": {
+				"key": "fb1a1808-421a-4a25-9e15-518878c1c7be",
 				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
 					"url": "http://google.com"
 				}
 			},
-			"buttonText": {
-				"__TYPE__": "FieldContent",
-				"value": "matter",
-				"type": "Text"
-			},
 			"backgroundImage": {
-				"__TYPE__": "ImageContent",
 				"url": "https://images.unsplash.com/photo-1616679312958-a86d9539afae?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MTk1MzAwNDZ8MA&ixlib=rb-4.0.3&q=85",
 				"alt": "orange fruit on white ceramic plate",
 				"origin": {
@@ -56,7 +30,30 @@
 						"y": 0
 					}
 				},
+				"credits": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "mainly",
+				"type": "Text"
+			},
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Veniam ut do duis. Excepteur id commodo quis nisi amet mollit dolor ut non aliquip nulla eu proident. Enim fugiat proident consequat ipsum sint commodo ea fugiat id."
+						}
+					}
+				]
+			},
+			"buttonText": {
+				"__TYPE__": "FieldContent",
+				"value": "consonant",
+				"type": "Text"
 			}
 		},
 		"items": [

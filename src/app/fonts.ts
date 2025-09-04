@@ -19,12 +19,12 @@ export const univers = localFont({
 export const ivymode = localFont({
   src: [
     {
-      path: '../../public/fonts/ivymode-regular.woff2',
+      path: '../../public/fonts/ivymode-regular-300.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../../public/fonts/ivymode-italic.woff2',
+      path: '../../public/fonts/ivymode-italic-300.woff2',
       weight: '400',
       style: 'italic',
     },

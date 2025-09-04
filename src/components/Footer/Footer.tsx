@@ -1,11 +1,16 @@
-import { Bounded } from '@/ui/Bounded';
+import { createClient } from '@/prismicio';
+import { SliceZone } from '@prismicio/react';
 
-export default function Footer() {
+import { components } from '@/slices';
+
+export default async function Footer() {
+  const client = createClient();
+
+  const footer = await client.getSingle('footer');
+
   return (
     <footer>
-      <Bounded yPadding='lg' className='relative'>
-        footer
-      </Bounded>
+      <SliceZone slices={footer.data.slices} components={components} />
     </footer>
   );
 }
