@@ -9,16 +9,11 @@ import { Heading } from '../ui/Heading';
 
 const defaultComponents: JSXMapSerializer = {
   heading1: ({ children }) => (
-    <Heading as='h1' className='mb-7 mt-12 first:mt-0 last:mb-0'>
+    <Heading as='h2' className='mb-7 mt-12 first:mt-0 last:mb-0'>
       {children}
     </Heading>
   ),
   heading2: ({ children }) => (
-    <Heading as='h2' size='md' className='mb-7 mt-12 first:mt-0 last:mb-0'>
-      {children}
-    </Heading>
-  ),
-  heading3: ({ children }) => (
     <Heading as='h3' size='sm' className='mb-7 mt-12 first:mt-0 last:mb-0'>
       {children}
     </Heading>

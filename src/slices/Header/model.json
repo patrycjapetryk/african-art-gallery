@@ -1,8 +1,8 @@
 {
-  "id": "background",
+  "id": "header",
   "type": "SharedSlice",
-  "name": "Background",
-  "description": "Background",
+  "name": "Header",
+  "description": "Header",
   "variations": [
     {
       "id": "default",
@@ -12,19 +12,20 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "backgroundColor": {
-          "type": "Color",
+        "title": {
+          "type": "Text",
           "config": {
-            "label": "Background color",
+            "label": "Title",
             "placeholder": ""
           }
         },
-        "backgroundImage": {
-          "type": "Image",
+        "text": {
+          "type": "StructuredText",
           "config": {
-            "label": "Background Image",
-            "constraint": {},
-            "thumbnails": []
+            "label": "Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
           }
         }
       },

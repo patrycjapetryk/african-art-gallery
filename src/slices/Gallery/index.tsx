@@ -8,11 +8,11 @@ import { Heading } from '@/ui/Heading';
 import { ConditionalWrap } from '@/ui/ConditionalWrap';
 import Button from '@/ui/Button';
 
-type ItemProps = {
-  news: Content.NewsSliceDefaultPrimaryNewsItem;
+type GalleryItemProps = {
+  news: Content.GallerySliceDefaultPrimaryGalleryItemItem;
 };
 
-const NewsCard: FC<ItemProps> = ({ news }) => {
+const GalleryCard: FC<GalleryItemProps> = ({ news }) => {
   const { image, title, text, link } = news;
 
   return (
@@ -43,23 +43,17 @@ const NewsCard: FC<ItemProps> = ({ news }) => {
   );
 };
 
-export type NewsProps = SliceComponentProps<Content.NewsSlice>;
+export type GalleryProps = SliceComponentProps<Content.GallerySlice>;
 
-const News: FC<NewsProps> = ({ slice }) => {
-  const { news, title, link } = slice.primary;
+const Gallery: FC<GalleryProps> = ({ slice }) => {
+  const { galleryItem, link } = slice.primary;
 
   return (
     <Bounded as='section' className='bg-white'>
       <div className='grid gap-10 w-full'>
-        {isFilled.keyText(title) && (
-          <Heading as='h2' className='text-center'>
-            {title}
-          </Heading>
-        )}
-
         <ul className='grid grid-cols-2 items-start gap-y-8 gap-x-4 md:gap-4 md:grid-cols-4'>
-          {news.map((item) => (
-            <NewsCard key={item.image.url} news={item} />
+          {galleryItem.map((item) => (
+            <GalleryCard key={item.image.url} news={item} />
           ))}
         </ul>
 
@@ -75,4 +69,4 @@ const News: FC<NewsProps> = ({ slice }) => {
   );
 };
 
-export default News;
+export default Gallery;

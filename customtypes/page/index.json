@@ -30,11 +30,25 @@
           "customtypes": ["page"]
         }
       },
+      "backgroundImage": {
+        "type": "Image",
+        "config": {
+          "label": "Background image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "gallery": {
+              "type": "SharedSlice"
+            },
+            "header": {
+              "type": "SharedSlice"
+            },
             "exhibition": {
               "type": "SharedSlice"
             },

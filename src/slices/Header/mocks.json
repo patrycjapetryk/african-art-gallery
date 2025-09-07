@@ -1,0 +1,25 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "equator",
+				"type": "Text"
+			},
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Velit velit do id mollit. Anim labore laboris qui ex culpa mollit et adipisicing pariatur quis quis officia magna."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
