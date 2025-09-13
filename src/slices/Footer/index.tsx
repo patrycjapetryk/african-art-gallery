@@ -16,7 +16,7 @@ const Footer: FC<FooterProps> = ({ slice }) => {
 
   return (
     <Bounded as='footer' yPadding='lg' className='mt-24'>
-      <ul className='w-full grid md:grid-cols-5 gap-4 md:text-xs'>
+      <ul className='w-full border-t pt-14 border-gray-300 grid md:grid-cols-5 gap-4 md:text-xs'>
         <li>
           <Heading as='h3' size='xs' className='mb-2'>
             {phone?.title || ''}

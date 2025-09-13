@@ -4,11 +4,12 @@
 		"variation": "default",
 		"primary": {
 			"buttonLink": {
-				"key": "fb1a1808-421a-4a25-9e15-518878c1c7be",
 				"__TYPE__": "LinkContent",
+				"key": "bdbce15e-06e9-4019-bbad-a42e2af36f7e",
 				"value": {
 					"__TYPE__": "ExternalLink",
-					"url": "http://google.com"
+					"url": "https://prismic.io",
+					"text": "wave"
 				}
 			},
 			"backgroundImage": {
@@ -40,19 +41,8 @@
 				"type": "Text"
 			},
 			"text": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Veniam ut do duis. Excepteur id commodo quis nisi amet mollit dolor ut non aliquip nulla eu proident. Enim fugiat proident consequat ipsum sint commodo ea fugiat id."
-						}
-					}
-				]
-			},
-			"buttonText": {
 				"__TYPE__": "FieldContent",
-				"value": "consonant",
+				"value": "structure",
 				"type": "Text"
 			}
 		},

@@ -4,7 +4,7 @@ import Menu from '@/components/Menu/Menu';
 export default function Header() {
   return (
     <header className='w-full'>
-      <div className='m-auto flex w-full max-w-screen-3xl items-center justify-between py-6 md:px-[5%] md:pt-4 md:pb-3 md:pl-0 lg:pl-10 xl:px-[7%] 2xl:px-[10%]'>
+      <div className='flex w-full items-center justify-between gap-2 px-4 md:px-[7.5%] py-6 md:pt-4 md:pb-3'>
         <Logo />
         <Menu />
       </div>

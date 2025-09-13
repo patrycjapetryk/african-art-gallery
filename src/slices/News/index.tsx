@@ -49,7 +49,7 @@ const News: FC<NewsProps> = ({ slice }) => {
   const { news, title, link } = slice.primary;
 
   return (
-    <Bounded as='section' className='bg-white'>
+    <Bounded as='section'>
       <div className='grid gap-10 w-full'>
         {isFilled.keyText(title) && (
           <Heading as='h2' className='text-center'>

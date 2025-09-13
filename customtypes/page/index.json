@@ -30,14 +30,6 @@
           "customtypes": ["page"]
         }
       },
-      "backgroundImage": {
-        "type": "Image",
-        "config": {
-          "label": "Background image",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

@@ -1,50 +1,38 @@
 import { FC } from 'react';
 import { type Content, isFilled } from '@prismicio/client';
 import { PrismicNextLink, PrismicNextImage } from '@prismicio/next';
-import type { SliceComponentProps, JSXMapSerializer } from '@prismicio/react';
+import type { SliceComponentProps } from '@prismicio/react';
 
-import { Bounded } from '@/ui/Bounded';
 import { Heading } from '@/ui/Heading';
-import { PrismicRichText } from '@/ui/PrismicRichText';
-
-const components: JSXMapSerializer = {
-  heading1: ({ children }) => (
-    <Heading as='h2' size='xl' className='mb-4 mt-12 first:mt-0 last:mb-0'>
-      {children}
-    </Heading>
-  ),
-};
+import Button from '@/ui/Button';
 
 type HeroProps = SliceComponentProps<Content.HeroSlice>;
 
 const Hero: FC<HeroProps> = ({ slice }) => {
-  const backgroundImage = slice.primary.backgroundImage;
+  const { backgroundImage, title, text, buttonLink } = slice.primary;
 
   return (
-    <section className='relative bg-slate-900 text-white'>
+    <section className='relative bg-slate-900 text-white h-[75vh] mb-6 flex p-10'>
       {isFilled.image(backgroundImage) && (
         <PrismicNextImage
           field={backgroundImage}
           alt=''
           fill={true}
-          className='pointer-events-none select-none object-cover opacity-40'
+          className='pointer-events-none select-none object-cover opacity-80'
         />
       )}
-      <Bounded yPadding='lg' className='relative'>
-        <div className='grid justify-items-center gap-8'>
-          <div className='max-w-2xl text-center'>
-            <PrismicRichText field={slice.primary.text} components={components} />
-          </div>
-          {isFilled.link(slice.primary.buttonLink) && (
-            <PrismicNextLink
-              field={slice.primary.buttonLink}
-              className='rounded-sm bg-white px-5 py-3 font-medium text-slate-800'
-            >
-              {slice.primary.buttonText || 'Learn More'}
-            </PrismicNextLink>
-          )}
-        </div>
-      </Bounded>
+      <div className='relative flex flex-col justify-end mb-1'>
+        <p className='uppercase text-xs'>{text}</p>
+        <Heading as='h1' size='xl' className='-translate-y-4 italic'>
+          {title}
+        </Heading>
+
+        {isFilled.link(slice.primary.buttonLink) && (
+          <PrismicNextLink field={buttonLink}>
+            <Button>{buttonLink.text || 'Learn More'}</Button>
+          </PrismicNextLink>
+        )}
+      </div>
     </section>
   );
 };

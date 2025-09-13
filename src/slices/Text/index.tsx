@@ -10,10 +10,11 @@ type TextProps = SliceComponentProps<Content.TextSlice>;
 
 const Text: FC<TextProps> = ({ slice }) => {
   return (
-    <Bounded as='section' className='bg-white leading-relaxed'>
+    <Bounded as='section' className='leading-relaxed'>
       <div
         className={clsx(
-          slice.variation === 'oneColumnCentered' && 'text-center max-w-[95%] md:max-w-[72%]',
+          slice.variation === 'oneColumnCentered' &&
+            'text-justify [&>h2]:text-center max-w-[95%] md:max-w-[72%]',
           slice.variation === 'twoColumns' && 'md:columns-2 md:gap-6',
         )}
       >

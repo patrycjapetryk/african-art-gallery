@@ -6,7 +6,7 @@ export default async function Logo() {
   const settings = await client.getSingle('settings');
 
   return (
-    <PrismicNextLink href='/' className='text-xl font-semibold tracking-tight'>
+    <PrismicNextLink href='/' className='ml-0.5 w-48'>
       <PrismicNextImage field={settings.data.logo_image} />
     </PrismicNextLink>
   );

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function LanguageSwitcher() {
   return (
-    <div className='text-sm uppercase w-30 flex justify-end'>
+    <div className='text-sm uppercase w-36 flex justify-end'>
       Polski
       <Image
         src='/images/down-arrow-icon.svg'

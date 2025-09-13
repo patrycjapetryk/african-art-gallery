@@ -9,7 +9,7 @@ type Props = ComponentProps<'div'>;
 
 export default function DesktopMenu({ className, ...spread }: Props) {
   return (
-    <div className={cn('flex w-full justify-end items-center gap-4', className)} {...spread}>
+    <div className={cn('flex w-full justify-end items-center', className)} {...spread}>
       <Navigation />
       <SearchBar />
       <SocialMediaNavigation />

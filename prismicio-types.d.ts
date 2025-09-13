@@ -135,17 +135,6 @@ interface PageDocumentData {
   parent: prismic.ContentRelationshipField<"page">;
 
   /**
-   * Background image field in *Page*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: page.backgroundImage
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  backgroundImage: prismic.ImageField<never>;
-
-  /**
    * Slice Zone field in *Page*
    *
    * - **Field Type**: Slice Zone
@@ -801,6 +790,16 @@ export interface HeroSliceDefaultPrimary {
   title: prismic.KeyTextField;
 
   /**
+   * Text field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+
+  /**
    * Button Link field in *Hero → Default → Primary*
    *
    * - **Field Type**: Link
@@ -817,16 +816,6 @@ export interface HeroSliceDefaultPrimary {
   >;
 
   /**
-   * Button Text field in *Hero → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.buttonText
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  buttonText: prismic.KeyTextField;
-
-  /**
    * Background Image field in *Hero → Default → Primary*
    *
    * - **Field Type**: Image
@@ -835,16 +824,6 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   backgroundImage: prismic.ImageField<never>;
-
-  /**
-   * Text field in *Hero → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.text
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  text: prismic.RichTextField;
 }
 
 /**
@@ -1415,6 +1394,16 @@ export type TextSlice = prismic.SharedSlice<"text", TextSliceVariation>;
  */
 export interface TextWithImageSliceDefaultPrimary {
   /**
+   * Title field in *TextWithImage → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_with_image.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
    * Text field in *TextWithImage → Default → Primary*
    *
    * - **Field Type**: Rich Text
@@ -1449,49 +1438,9 @@ export type TextWithImageSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *TextWithImage → Left Image → Primary*
- */
-export interface TextWithImageSliceLeftImagePrimary {
-  /**
-   * Text field in *TextWithImage → Left Image → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: text_with_image.leftImage.primary.text
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  text: prismic.RichTextField;
-
-  /**
-   * Image field in *TextWithImage → Left Image → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: text_with_image.leftImage.primary.image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-}
-
-/**
- * Left Image variation for TextWithImage Slice
- *
- * - **API ID**: `leftImage`
- * - **Description**: TextWithImage
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type TextWithImageSliceLeftImage = prismic.SharedSliceVariation<
-  "leftImage",
-  Simplify<TextWithImageSliceLeftImagePrimary>,
-  never
->;
-
-/**
  * Slice variation for *TextWithImage*
  */
-type TextWithImageSliceVariation =
-  | TextWithImageSliceDefault
-  | TextWithImageSliceLeftImage;
+type TextWithImageSliceVariation = TextWithImageSliceDefault;
 
 /**
  * TextWithImage Shared Slice
@@ -1605,10 +1554,8 @@ declare module "@prismicio/client" {
       TextSliceOneColumnCentered,
       TextWithImageSlice,
       TextWithImageSliceDefaultPrimary,
-      TextWithImageSliceLeftImagePrimary,
       TextWithImageSliceVariation,
       TextWithImageSliceDefault,
-      TextWithImageSliceLeftImage,
     };
   }
 }

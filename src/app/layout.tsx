@@ -9,7 +9,7 @@ import { univers, ivymode } from './fonts';
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang='en' className={`${univers.variable} ${ivymode.variable} scroll-smooth`}>
-      <body className='font-sans overflow-x-hidden antialiased text-aag-black text-base'>
+      <body className='font-sans overflow-x-hidden antialiased text-aag-black text-base bg-aag-beige'>
         <Header />
         {children}
         <Footer />

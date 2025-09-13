@@ -49,7 +49,7 @@ const Gallery: FC<GalleryProps> = ({ slice }) => {
   const { galleryItem, link } = slice.primary;
 
   return (
-    <Bounded as='section' className='bg-white'>
+    <Bounded as='section'>
       <div className='grid gap-10 w-full'>
         <ul className='grid grid-cols-2 items-start gap-y-8 gap-x-4 md:gap-4 md:grid-cols-4'>
           {galleryItem.map((item) => (

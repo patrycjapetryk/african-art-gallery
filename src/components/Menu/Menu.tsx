@@ -4,7 +4,7 @@ import DesktopMenu from './DesktopMenu';
 export default function Menu() {
   return (
     <>
-      <DesktopMenu className='max-w-[80%]' />
+      <DesktopMenu />
       {/* <DesktopMenu className='hidden lg:flex' /> */}
       {/* <MobileMenu className='lg:hidden' /> */}
     </>
