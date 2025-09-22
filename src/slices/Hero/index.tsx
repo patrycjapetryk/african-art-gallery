@@ -12,27 +12,26 @@ const Hero: FC<HeroProps> = ({ slice }) => {
   const { backgroundImage, title, text, buttonLink } = slice.primary;
 
   return (
-    <section className='relative bg-slate-900 text-white h-[75vh] mb-6 flex p-10'>
-      {isFilled.image(backgroundImage) && (
-        <PrismicNextImage
-          field={backgroundImage}
-          alt=''
-          fill={true}
-          className='pointer-events-none select-none object-cover opacity-80'
-        />
+    <section className='relative bg-slate-900 text-white h-[75vh] mb-6 flex'>
+      {isFilled.image(backgroundImage) && isFilled.link(buttonLink) && (
+        <PrismicNextLink field={buttonLink} className='flex w-full p-10'>
+          <PrismicNextImage
+            field={backgroundImage}
+            alt=''
+            fill={true}
+            className='pointer-events-none select-none object-cover opacity-80'
+          />
+          <div className='relative w-full flex flex-col justify-end mb-1'>
+            <p className='uppercase text-xs'>{text}</p>
+            <Heading as='h1' size='xl' className='-translate-y-4 italic'>
+              {title}
+            </Heading>
+            <div>
+              <Button>{buttonLink.text || 'Learn More'}</Button>
+            </div>
+          </div>
+        </PrismicNextLink>
       )}
-      <div className='relative flex flex-col justify-end mb-1'>
-        <p className='uppercase text-xs'>{text}</p>
-        <Heading as='h1' size='xl' className='-translate-y-4 italic'>
-          {title}
-        </Heading>
-
-        {isFilled.link(slice.primary.buttonLink) && (
-          <PrismicNextLink field={buttonLink}>
-            <Button>{buttonLink.text || 'Learn More'}</Button>
-          </PrismicNextLink>
-        )}
-      </div>
     </section>
   );
 };
