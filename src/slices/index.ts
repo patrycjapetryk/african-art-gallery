@@ -6,6 +6,7 @@ export const components = {
   exhibition: dynamic(() => import("./Exhibition")),
   footer: dynamic(() => import("./Footer")),
   gallery: dynamic(() => import("./Gallery")),
+  gallery_item: dynamic(() => import("./GalleryItem")),
   header: dynamic(() => import("./Header")),
   hero: dynamic(() => import("./Hero")),
   image: dynamic(() => import("./Image")),

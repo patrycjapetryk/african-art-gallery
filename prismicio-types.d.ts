@@ -38,6 +38,82 @@ export type FooterDocument<Lang extends string = string> =
     Lang
   >;
 
+type GalleryDocumentDataSlicesSlice = GalleryItemSlice;
+
+/**
+ * Content for Gallery documents
+ */
+interface GalleryDocumentData {
+  /**
+   * Title field in *Gallery*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.TitleField;
+
+  /**
+   * Slice Zone field in *Gallery*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<GalleryDocumentDataSlicesSlice> /**
+   * Meta Title field in *Gallery*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: gallery.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Gallery*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: gallery.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Gallery*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Gallery document from Prismic
+ *
+ * - **API ID**: `gallery`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type GalleryDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<GalleryDocumentData>,
+    "gallery",
+    Lang
+  >;
+
 /**
  * Item in *Navigation → Links*
  */
@@ -292,6 +368,7 @@ export type SocialMediaNavigationDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | FooterDocument
+  | GalleryDocument
   | NavigationDocument
   | PageDocument
   | SettingsDocument
@@ -721,6 +798,129 @@ type GallerySliceVariation = GallerySliceDefault;
 export type GallerySlice = prismic.SharedSlice<
   "gallery",
   GallerySliceVariation
+>;
+
+/**
+ * Primary content in *GalleryItem → Default → Primary*
+ */
+export interface GalleryItemSliceDefaultPrimary {
+  /**
+   * Heading field in *GalleryItem → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_item.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Description field in *GalleryItem → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_item.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Text field in *GalleryItem → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_item.default.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+
+  /**
+   * Image field in *GalleryItem → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_item.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * PDF link field in *GalleryItem → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_item.default.primary.pdfLink
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  pdfLink: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * Left arrow field in *GalleryItem → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_item.default.primary.leftArrow
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  leftArrow: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * Right arrow field in *GalleryItem → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_item.default.primary.rightArrow
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  rightArrow: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+}
+
+/**
+ * Default variation for GalleryItem Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GalleryItemSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<GalleryItemSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *GalleryItem*
+ */
+type GalleryItemSliceVariation = GalleryItemSliceDefault;
+
+/**
+ * GalleryItem Shared Slice
+ *
+ * - **API ID**: `gallery_item`
+ * - **Description**: GalleryItem
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GalleryItemSlice = prismic.SharedSlice<
+  "gallery_item",
+  GalleryItemSliceVariation
 >;
 
 /**
@@ -1478,6 +1678,9 @@ declare module "@prismicio/client" {
       FooterDocument,
       FooterDocumentData,
       FooterDocumentDataSlicesSlice,
+      GalleryDocument,
+      GalleryDocumentData,
+      GalleryDocumentDataSlicesSlice,
       NavigationDocument,
       NavigationDocumentData,
       NavigationDocumentDataLinksItem,
@@ -1508,6 +1711,10 @@ declare module "@prismicio/client" {
       GallerySliceDefaultPrimary,
       GallerySliceVariation,
       GallerySliceDefault,
+      GalleryItemSlice,
+      GalleryItemSliceDefaultPrimary,
+      GalleryItemSliceVariation,
+      GalleryItemSliceDefault,
       HeaderSlice,
       HeaderSliceDefaultPrimary,
       HeaderSliceVariation,
