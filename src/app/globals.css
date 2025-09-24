@@ -6,7 +6,86 @@
 
   --color-aag-beige: #faf8f4;
   --color-aag-black: #191919;
+  --color-aag-gray: oklch(92% 0.004 286.32);
 
   --text-base: 0.9rem;
   --text-sm: 0.87rem;
+
+  --animate-carousel: carousel 30s linear infinite;
+  --animate-fade-in: fade-in 0.5s ease-in-out;
+  --animate-dot-1: dot-1 1s ease-in-out infinite;
+  --animate-dot-2: dot-2 1s ease-in-out infinite;
+  --animate-dot-3: dot-3 1s ease-in-out infinite;
+
+  @keyframes carousel {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-50% -10px));
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes dot-1 {
+    0% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes dot-2 {
+    25% {
+      opacity: 0.2;
+    }
+    75% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes dot-3 {
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+/* Hide scrollbar*/
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Change autocomplete styles in WebKit */
+@layer utilities {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover {
+    border: 1px solid #f2f2f4;
+    -webkit-text-fill-color: #272526;
+    -webkit-box-shadow: 0 0 0px 1000px oklch(92% 0.004 286.32) inset;
+  }
+
+  input:-webkit-autofill:focus {
+    border: 1px solid #272526;
+    -webkit-text-fill-color: #272526;
+    -webkit-box-shadow: 0 0 0px 1000px oklch(92% 0.004 286.32) inset;
+  }
 }

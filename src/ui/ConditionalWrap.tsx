@@ -1,4 +1,4 @@
-import type { ElementType, ReactNode } from "react";
+import type { ElementType, ReactNode } from 'react';
 
 type ConditionalWrapProps = {
   condition: boolean;
@@ -6,13 +6,6 @@ type ConditionalWrapProps = {
   children: ReactNode;
 };
 
-/**
- * Adds a wrapper around children if a condition is true.
- */
-export function ConditionalWrap({
-  condition,
-  wrap: Wrap,
-  children,
-}: ConditionalWrapProps) {
+export function ConditionalWrap({ condition, wrap: Wrap, children }: ConditionalWrapProps) {
   return condition ? <Wrap>{children}</Wrap> : children;
 }

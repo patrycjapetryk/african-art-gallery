@@ -1,0 +1,34 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"nameLabel": {
+				"__TYPE__": "FieldContent",
+				"value": "dress",
+				"type": "Text"
+			},
+			"lastNameLabel": {
+				"__TYPE__": "FieldContent",
+				"value": "gray",
+				"type": "Text"
+			},
+			"emailLabel": {
+				"__TYPE__": "FieldContent",
+				"value": "worth",
+				"type": "Text"
+			},
+			"phoneLabel": {
+				"__TYPE__": "FieldContent",
+				"value": "fine",
+				"type": "Text"
+			},
+			"messageLabel": {
+				"__TYPE__": "FieldContent",
+				"value": "thread",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

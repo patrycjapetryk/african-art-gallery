@@ -1,0 +1,54 @@
+{
+  "id": "contact_form",
+  "type": "SharedSlice",
+  "name": "ContactForm",
+  "description": "ContactForm",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "nameLabel": {
+          "type": "Text",
+          "config": {
+            "label": "Name label",
+            "placeholder": ""
+          }
+        },
+        "lastNameLabel": {
+          "type": "Text",
+          "config": {
+            "label": "Last name label",
+            "placeholder": ""
+          }
+        },
+        "emailLabel": {
+          "type": "Text",
+          "config": {
+            "label": "Email label",
+            "placeholder": ""
+          }
+        },
+        "phoneLabel": {
+          "type": "Text",
+          "config": {
+            "label": "Phone label",
+            "placeholder": ""
+          }
+        },
+        "messageLabel": {
+          "type": "Text",
+          "config": {
+            "label": "Messaage label",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

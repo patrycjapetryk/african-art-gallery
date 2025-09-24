@@ -172,6 +172,7 @@ export type NavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | ContactFormSlice
   | GallerySlice
   | HeaderSlice
   | ExhibitionSlice
@@ -373,6 +374,91 @@ export type AllDocumentTypes =
   | PageDocument
   | SettingsDocument
   | SocialMediaNavigationDocument;
+
+/**
+ * Primary content in *ContactForm → Default → Primary*
+ */
+export interface ContactFormSliceDefaultPrimary {
+  /**
+   * Name label field in *ContactForm → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.default.primary.nameLabel
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  nameLabel: prismic.KeyTextField;
+
+  /**
+   * Last name label field in *ContactForm → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.default.primary.lastNameLabel
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  lastNameLabel: prismic.KeyTextField;
+
+  /**
+   * Email label field in *ContactForm → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.default.primary.emailLabel
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  emailLabel: prismic.KeyTextField;
+
+  /**
+   * Phone label field in *ContactForm → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.default.primary.phoneLabel
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phoneLabel: prismic.KeyTextField;
+
+  /**
+   * Messaage label field in *ContactForm → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.default.primary.messageLabel
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  messageLabel: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for ContactForm Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactFormSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ContactFormSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ContactForm*
+ */
+type ContactFormSliceVariation = ContactFormSliceDefault;
+
+/**
+ * ContactForm Shared Slice
+ *
+ * - **API ID**: `contact_form`
+ * - **Description**: ContactForm
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactFormSlice = prismic.SharedSlice<
+  "contact_form",
+  ContactFormSliceVariation
+>;
 
 /**
  * Primary content in *Exhibition → Default → Primary*
@@ -1693,6 +1779,10 @@ declare module "@prismicio/client" {
       SocialMediaNavigationDocumentData,
       SocialMediaNavigationDocumentDataNavigationItemItem,
       AllDocumentTypes,
+      ContactFormSlice,
+      ContactFormSliceDefaultPrimary,
+      ContactFormSliceVariation,
+      ContactFormSliceDefault,
       ExhibitionSlice,
       ExhibitionSliceDefaultPrimary,
       ExhibitionSliceVariation,
