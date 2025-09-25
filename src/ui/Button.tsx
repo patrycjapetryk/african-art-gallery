@@ -7,7 +7,7 @@ type ButtonProps = {
   children: ReactNode;
 };
 
-export default function Button({ variant = 'primary', className, children }: ButtonProps) {
+export function Button({ variant = 'primary', className, children }: ButtonProps) {
   return (
     <span
       className={clsx(

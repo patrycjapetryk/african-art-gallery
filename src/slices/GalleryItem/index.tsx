@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 import { Bounded } from '@/ui/Bounded';
 import { Heading } from '@/ui/Heading';
-import Button from '@/ui/Button';
+import { Button } from '@/ui/Button';
 
 export type GalleryItemProps = SliceComponentProps<Content.GalleryItemSlice>;
 

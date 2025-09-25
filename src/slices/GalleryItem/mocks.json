@@ -47,21 +47,19 @@
 				}
 			},
 			"leftArrow": {
-				"key": "28d08c3d-d22d-4450-ad48-7c1316f37582",
+				"key": "4fc37e79-1f81-46c1-9785-f996aed6b5b2",
 				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
-					"url": "http://twitter.com",
-					"text": "horn"
+					"url": "https://prismic.io"
 				}
 			},
 			"rightArrow": {
-				"key": "3108e0d0-06c2-483a-95f0-5ab4d6970b49",
+				"key": "ecbd1b60-fac1-444c-8294-342096572fe7",
 				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
-					"url": "https://slicemachine.dev",
-					"text": "put"
+					"url": "http://twitter.com"
 				}
 			},
 			"heading": {

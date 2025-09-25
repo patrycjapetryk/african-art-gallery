@@ -39,14 +39,6 @@
             "multi": "paragraph,strong,em,hyperlink"
           }
         },
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "Image",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
         "pdfLink": {
           "type": "Link",
           "config": {
@@ -58,6 +50,14 @@
             "repeat": false
           }
         },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
         "leftArrow": {
           "type": "Link",
           "config": {
@@ -65,7 +65,7 @@
             "placeholder": "",
             "select": null,
             "allowTargetBlank": true,
-            "allowText": true,
+            "allowText": false,
             "repeat": false
           }
         },
@@ -76,7 +76,7 @@
             "placeholder": "",
             "select": null,
             "allowTargetBlank": true,
-            "allowText": true,
+            "allowText": false,
             "repeat": false
           }
         }

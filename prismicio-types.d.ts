@@ -921,16 +921,6 @@ export interface GalleryItemSliceDefaultPrimary {
   text: prismic.RichTextField;
 
   /**
-   * Image field in *GalleryItem → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: gallery_item.default.primary.image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
    * PDF link field in *GalleryItem → Default → Primary*
    *
    * - **Field Type**: Link
@@ -945,6 +935,16 @@ export interface GalleryItemSliceDefaultPrimary {
     prismic.FieldState,
     never
   >;
+
+  /**
+   * Image field in *GalleryItem → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_item.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
 
   /**
    * Left arrow field in *GalleryItem → Default → Primary*

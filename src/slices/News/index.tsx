@@ -6,7 +6,7 @@ import { PrismicNextLink, PrismicNextImage } from '@prismicio/next';
 import { Bounded } from '@/ui/Bounded';
 import { Heading } from '@/ui/Heading';
 import { ConditionalWrap } from '@/ui/ConditionalWrap';
-import Button from '@/ui/Button';
+import { Button } from '@/ui/Button';
 
 type ItemProps = {
   news: Content.NewsSliceDefaultPrimaryNewsItem;

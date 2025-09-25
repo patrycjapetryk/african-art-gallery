@@ -4,7 +4,7 @@ import { PrismicNextLink, PrismicNextImage } from '@prismicio/next';
 import type { SliceComponentProps } from '@prismicio/react';
 
 import { Heading } from '@/ui/Heading';
-import Button from '@/ui/Button';
+import { Button } from '@/ui/Button';
 
 type HeroProps = SliceComponentProps<Content.HeroSlice>;
 

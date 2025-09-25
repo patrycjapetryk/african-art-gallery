@@ -1,4 +1,4 @@
-import Logo from '@/ui/Logo';
+import { Logo } from '@/ui/Logo';
 import Menu from '@/components/Menu/Menu';
 
 export default function Header() {

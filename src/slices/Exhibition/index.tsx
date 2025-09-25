@@ -3,9 +3,7 @@ import { type Content, isFilled } from '@prismicio/client';
 import { PrismicNextLink, PrismicNextImage } from '@prismicio/next';
 import type { SliceComponentProps } from '@prismicio/react';
 
-import { Bounded } from '@/ui/Bounded';
-import { Heading } from '@/ui/Heading';
-import Button from '@/ui/Button';
+import { Bounded, Heading, Button } from '@/ui';
 
 export type ExhibitionProps = SliceComponentProps<Content.ExhibitionSlice>;
 
