@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { type Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
+import { PrismicNextLink } from '@prismicio/next';
 
 import { Heading } from '@/ui/Heading';
 import { Bounded } from '@/ui/Bounded';
@@ -40,6 +41,15 @@ const Footer: FC<FooterProps> = ({ slice }) => {
           <Heading as='h3' size='xs' className='mb-2'>
             {socialMedia?.title || ''}
           </Heading>
+          {socialMedia?.link.map((link) => (
+            <nav key={link.key}>
+              <ul>
+                <li>
+                  <PrismicNextLink field={link} />
+                </li>
+              </ul>
+            </nav>
+          ))}
         </li>
         <li>
           <Heading as='h3' size='xs' className='mb-2'>
