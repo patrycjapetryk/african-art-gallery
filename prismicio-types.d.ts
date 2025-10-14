@@ -1573,62 +1573,6 @@ export type TextSliceTwoColumns = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *Text → Narrow → Primary*
- */
-export interface TextSliceNarrowPrimary {
-  /**
-   * Text field in *Text → Narrow → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: text.narrow.primary.text
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  text: prismic.RichTextField;
-}
-
-/**
- * Narrow variation for Text Slice
- *
- * - **API ID**: `narrow`
- * - **Description**: Text
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type TextSliceNarrow = prismic.SharedSliceVariation<
-  "narrow",
-  Simplify<TextSliceNarrowPrimary>,
-  never
->;
-
-/**
- * Primary content in *Text → Narrow two columns → Primary*
- */
-export interface TextSliceNarrowTwoColumnsPrimary {
-  /**
-   * Text field in *Text → Narrow two columns → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: text.narrowTwoColumns.primary.text
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  text: prismic.RichTextField;
-}
-
-/**
- * Narrow two columns variation for Text Slice
- *
- * - **API ID**: `narrowTwoColumns`
- * - **Description**: Text
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type TextSliceNarrowTwoColumns = prismic.SharedSliceVariation<
-  "narrowTwoColumns",
-  Simplify<TextSliceNarrowTwoColumnsPrimary>,
-  never
->;
-
-/**
  * Primary content in *Text → One column centered → Primary*
  */
 export interface TextSliceOneColumnCenteredPrimary {
@@ -1662,8 +1606,6 @@ export type TextSliceOneColumnCentered = prismic.SharedSliceVariation<
 type TextSliceVariation =
   | TextSliceDefault
   | TextSliceTwoColumns
-  | TextSliceNarrow
-  | TextSliceNarrowTwoColumns
   | TextSliceOneColumnCentered;
 
 /**
@@ -1840,14 +1782,10 @@ declare module "@prismicio/client" {
       TextSlice,
       TextSliceDefaultPrimary,
       TextSliceTwoColumnsPrimary,
-      TextSliceNarrowPrimary,
-      TextSliceNarrowTwoColumnsPrimary,
       TextSliceOneColumnCenteredPrimary,
       TextSliceVariation,
       TextSliceDefault,
       TextSliceTwoColumns,
-      TextSliceNarrow,
-      TextSliceNarrowTwoColumns,
       TextSliceOneColumnCentered,
       TextWithImageSlice,
       TextWithImageSliceDefaultPrimary,

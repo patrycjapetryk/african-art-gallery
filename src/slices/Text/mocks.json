@@ -9,7 +9,7 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Ullamco veniam ea sit sit pariatur irure eu velit mollit commodo."
+							"text": "Officia quis fugiat nostrud nostrud id tempor dolor. Laboris dolor anim voluptate ea est adipisicing nulla consequat officia tempor."
 						}
 					}
 				]
@@ -32,53 +32,7 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Ut irure do et."
-						}
-					}
-				]
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "narrow",
-		"primary": {
-			"text": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Esse ullamco Lorem et sint nostrud voluptate ad veniam aliqua. Ipsum duis aliquip irure dolore tempor sunt amet cillum ea aliquip ea tempor sint pariatur. Aliqua duis mollit id elit voluptate aliquip enim in."
-						}
-					}
-				]
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "narrowTwoColumns",
-		"primary": {
-			"text": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Lorem nulla anim nostrud ut cupidatat incididunt occaecat proident cupidatat laborum enim aliqua aute nisi. Ex aliquip dolore laborum enim veniam nostrud excepteur proident duis."
+							"text": "Duis tempor id excepteur. Velit laborum adipisicing quis velit. Irure ut id ex sint aliquip adipisicing exercitation culpa commodo irure adipisicing velit in mollit veniam."
 						}
 					}
 				]
@@ -101,7 +55,7 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Nostrud voluptate in proident aliquip proident quis esse id dolore mollit. Dolor Lorem sint sit consequat labore non reprehenderit ut qui pariatur proident irure."
+							"text": "Est consequat pariatur tempor nisi commodo cupidatat amet. Pariatur sit fugiat nostrud cillum proident laboris dolore aute id duis. Irure ad magna eu sit eiusmod est sit deserunt proident Lorem."
 						}
 					}
 				]

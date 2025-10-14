@@ -41,7 +41,7 @@ export function Form() {
 
   return (
     <form
-      className='grid grid-cols-1 gap-7 lg:grid-cols-2 lg:gap-4'
+      className='w-full max-w-[480px] grid grid-cols-1 gap-7 lg:grid-cols-2 lg:gap-4'
       onSubmit={handleSubmit(onSubmit)}
       noValidate
     >
