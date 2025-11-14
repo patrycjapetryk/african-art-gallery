@@ -39,26 +39,25 @@
 		"variation": "banner",
 		"primary": {
 			"image": {
-				"url": "https://images.unsplash.com/photo-1577234286642-fc512a5f8f11?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MTk1MzAwNDZ8MA&ixlib=rb-4.0.3&q=85&rect=0%2C1512%2C3024%2C1008&w=3000&h=1000",
-				"alt": "sliced grapefruits",
+				"__TYPE__": "ImageContent",
 				"origin": {
-					"id": "ezSFnAFi9hY",
-					"url": "https://images.unsplash.com/photo-1577234286642-fc512a5f8f11?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MTk1MzAwNDZ8MA&ixlib=rb-4.0.3&q=85",
-					"width": 3024,
-					"height": 4032
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+					"width": 3424,
+					"height": 3424
 				},
-				"width": 3000,
-				"height": 1000,
+				"url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+				"width": 3424,
+				"height": 3424,
 				"edit": {
-					"background": "transparent",
 					"zoom": 1,
 					"crop": {
 						"x": 0,
-						"y": 1512
-					}
+						"y": 0
+					},
+					"background": "transparent"
 				},
-				"credits": null,
-				"__TYPE__": "ImageContent",
+				"alt": "ask",
 				"thumbnails": {}
 			}
 		},

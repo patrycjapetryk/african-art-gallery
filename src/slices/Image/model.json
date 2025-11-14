@@ -35,8 +35,8 @@
           "config": {
             "label": "Image",
             "constraint": {
-              "width": 3000,
-              "height": 1000
+              "width": null,
+              "height": null
             },
             "thumbnails": []
           }

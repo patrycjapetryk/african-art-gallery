@@ -12,7 +12,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
   const { backgroundImage, title, text, buttonLink } = slice.primary;
 
   return (
-    <section className='relative bg-slate-900 text-white h-[75vh] mb-6 flex'>
+    <section className='relative bg-slate-900 text-white h-[89vh] mb-6 flex'>
       {isFilled.image(backgroundImage) && isFilled.link(buttonLink) && (
         <PrismicNextLink field={buttonLink} className='flex w-full p-10'>
           <PrismicNextImage
