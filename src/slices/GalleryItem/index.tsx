@@ -11,7 +11,7 @@ import { Button } from '@/ui/Button';
 export type GalleryItemProps = SliceComponentProps<Content.GalleryItemSlice>;
 
 const GalleryItem: FC<GalleryItemProps> = ({ slice }) => {
-  const { image, heading, description, text, pdfLink, leftArrow, rightArrow } = slice.primary;
+  const { image, heading, description, pdfLink, leftArrow, rightArrow } = slice.primary;
 
   return (
     <Bounded as='section'>
