@@ -1,10 +1,10 @@
 import { PrismicPreview } from '@prismicio/next';
 import { repositoryName } from '@/prismicio';
 
-import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
 import './globals.css';
 import { univers, ivymode } from './fonts';
+import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

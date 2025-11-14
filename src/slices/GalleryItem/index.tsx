@@ -45,9 +45,9 @@ const GalleryItem: FC<GalleryItemProps> = ({ slice }) => {
             <PrismicRichText field={description} />
           </div>
         )}
-        <div className='text-center'>
+        {/* <div className='text-center'>
           <PrismicRichText field={text} />
-        </div>
+        </div> */}
         {isFilled.link(pdfLink) && (
           <div className='mt-10'>
             <PrismicNextLink field={pdfLink} className='font-semibold'>
