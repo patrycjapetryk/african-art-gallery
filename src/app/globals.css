@@ -17,6 +17,8 @@
   --animate-dot-2: dot-2 1s ease-in-out infinite;
   --animate-dot-3: dot-3 1s ease-in-out infinite;
 
+  --leading-tight: 0.9;
+
   @keyframes carousel {
     0% {
       transform: translateX(0);

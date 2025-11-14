@@ -14,7 +14,7 @@ const Image: FC<ImageProps> = ({ slice, index }) => {
   return (
     <Bounded as='section' className={clsx(index === 0 && 'pt-0 md:pt-0')}>
       {isFilled.image(image) && (
-        <div className='w-full bg-gray-100'>
+        <div className={clsx('w-full bg-gray-100', slice.variation === 'banner' && 'md:w-[72.4%]')}>
           <PrismicNextImage field={image} sizes='100vw' className='w-full' alt='' />
         </div>
       )}

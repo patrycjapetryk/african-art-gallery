@@ -21,11 +21,13 @@ const Hero: FC<HeroProps> = ({ slice }) => {
             fill={true}
             className='pointer-events-none select-none object-cover opacity-80'
           />
-          <div className='relative w-full flex flex-col justify-end mb-1'>
-            <p className='uppercase text-xs'>{text}</p>
-            <Heading as='h1' size='xl' className='-translate-y-4 italic'>
-              {title}
-            </Heading>
+          <div className='relative w-full flex flex-col justify-between items-center mb-1'>
+            <div className='self-end max-w-[700px] text-right mr-4 -mt-1'>
+              <p className='uppercase text-xs'>{text}</p>
+              <Heading as='h1' size='xl' className='italic'>
+                {title}
+              </Heading>
+            </div>
             <div>
               <Button>{buttonLink.text || 'Learn More'}</Button>
             </div>
