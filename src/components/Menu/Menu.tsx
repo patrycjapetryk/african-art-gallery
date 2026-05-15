@@ -1,10 +1,18 @@
 import DesktopMenu from './DesktopMenu';
 // import MobileMenu from './MobileMenu';
 
-export default function Menu() {
+interface LanguageSwitcherProps {
+  locales: {
+    lang: string;
+    lang_name: string;
+    url: string;
+  }[];
+}
+
+export default function Menu({ locales }: LanguageSwitcherProps) {
   return (
     <>
-      <DesktopMenu />
+      <DesktopMenu locales={locales} />
       {/* <DesktopMenu className='hidden lg:flex' /> */}
       {/* <MobileMenu className='lg:hidden' /> */}
     </>

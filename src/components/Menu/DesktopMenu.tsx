@@ -5,15 +5,23 @@ import SearchBar from '../SearchBar/SearchBar';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import SocialMediaNavigation from '../SocialMediaNavigation/SocialMediaNavigation';
 
-type Props = ComponentProps<'div'>;
+interface LanguageSwitcherProps {
+  locales: {
+    lang: string;
+    lang_name: string;
+    url: string;
+  }[];
+}
 
-export default function DesktopMenu({ className, ...spread }: Props) {
+type Props = ComponentProps<'div'> & LanguageSwitcherProps;
+
+export default function DesktopMenu({ className, locales, ...spread }: Props) {
   return (
     <div className={cn('flex w-full justify-end items-center', className)} {...spread}>
       <Navigation />
       <SearchBar />
       <SocialMediaNavigation />
-      <LanguageSwitcher />
+      <LanguageSwitcher locales={locales} />
     </div>
   );
 }

@@ -1,17 +1,40 @@
-import Image from 'next/image';
+'use client';
 
-export default function LanguageSwitcher() {
+import { PrismicNextLink } from '@prismicio/next';
+import { usePathname } from 'next/navigation';
+
+interface LanguageSwitcherProps {
+  locales: {
+    lang: string;
+    lang_name: string;
+    url: string;
+  }[];
+}
+
+const localeLabels = {
+  'en-us': 'ENGLISH',
+  pl: 'POLSKI',
+};
+
+export default function LanguageSwitcher({ locales }: LanguageSwitcherProps) {
+  const pathname = usePathname();
+
+  const currentLang = locales.find((locale) => pathname.startsWith(`/${locale.lang}`))?.lang;
+
   return (
-    <div className='text-sm uppercase w-36 flex justify-end'>
-      Polski
-      <Image
-        src='/images/down-arrow-icon.svg'
-        alt=''
-        width={12}
-        height={6}
-        className='ml-4'
-        priority
-      />
-    </div>
+    <ul className='w-36 flex justify-end gap-3 px-4 md:px-9'>
+      {locales
+        .filter((locale) => locale.lang !== currentLang) // tylko inny język
+        .map((locale) => (
+          <li key={locale.lang} className=''>
+            <PrismicNextLink
+              href={locale.url}
+              aria-label={`Change language to ${locale.lang_name}`}
+            >
+              {localeLabels[locale.lang as keyof typeof localeLabels] || locale.lang}
+            </PrismicNextLink>
+          </li>
+        ))}
+    </ul>
   );
 }

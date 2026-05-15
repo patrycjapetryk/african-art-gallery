@@ -10,12 +10,23 @@ export const repositoryName = process.env.NEXT_PUBLIC_PRISMIC_ENVIRONMENT || sm.
 /**
  * The project's Prismic Route Resolvers. This list determines a Prismic document's URL.
  */
+// const routes: prismic.ClientConfig['routes'] = [
+//   {
+//     type: 'page',
+//     path: '/:lang?/:uid',
+//   },
+//   {
+//     type: 'page',
+//     uid: 'home',
+//     path: '/:lang?',
+//   },
+// ];
 const routes: prismic.ClientConfig['routes'] = [
-  { type: 'page', path: '/', uid: 'home' },
-  { type: 'page', path: '/:uid' },
-  { type: 'gallery', path: '/gallery/:uid' },
-  { type: 'settings', path: '/' },
-  { type: 'navigation', path: '/' },
+  { type: 'page', path: '/:lang?', uid: 'home' },
+  { type: 'page', path: '/:lang?/:uid' },
+  { type: 'gallery', path: '/:lang?/gallery/:uid' },
+  { type: 'settings', path: '/:lang?' },
+  { type: 'navigation', path: '/:lang?' },
 ];
 
 /**
