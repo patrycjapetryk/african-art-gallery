@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { type Content, isFilled } from '@prismicio/client';
 import { PrismicNextLink, PrismicNextImage } from '@prismicio/next';
 import type { SliceComponentProps } from '@prismicio/react';
@@ -6,17 +5,12 @@ import type { SliceComponentProps } from '@prismicio/react';
 import { Bounded, Heading, Button } from '@/ui';
 
 export type ExhibitionProps = SliceComponentProps<Content.ExhibitionSlice>;
-// type Props = ExhibitionProps & {
-//   context: {
-//     lang: string;
-//   };
-// };
 
 const Exhibition = ({ slice }: ExhibitionProps) => {
   const { backgroundImage, title, name, buttonLink, date } = slice.primary;
 
   return (
-    <Bounded as='section' className='[&>*]:grid [&>*]:gap-10'>
+    <Bounded as='section' className='*:grid *:gap-10'>
       <Heading as='h2' className='text-center'>
         {title || ''}
       </Heading>

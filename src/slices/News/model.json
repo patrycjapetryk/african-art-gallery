@@ -8,8 +8,8 @@
       "id": "default",
       "name": "Default",
       "docURL": "...",
-      "version": "initial",
-      "description": "Default",
+      "version": "fixed",
+      "description": "News",
       "imageUrl": "",
       "primary": {
         "title": {
@@ -19,61 +19,47 @@
             "placeholder": ""
           }
         },
-        "news": {
-          "type": "Group",
+        "link": {
+          "type": "Link",
           "config": {
-            "label": "News",
-            "repeat": true,
-            "fields": {
-              "title": {
-                "type": "Text",
-                "config": {
-                  "label": "Title",
-                  "placeholder": ""
-                }
-              },
-              "text": {
-                "type": "Text",
-                "config": {
-                  "label": "Text",
-                  "placeholder": ""
-                }
-              },
-              "image": {
-                "type": "Image",
-                "config": {
-                  "label": "Image",
-                  "constraint": {},
-                  "thumbnails": []
-                }
-              },
-              "link": {
-                "type": "Link",
-                "config": {
-                  "label": "Link",
-                  "placeholder": "",
-                  "select": null,
-                  "allowTargetBlank": true,
-                  "allowText": true,
-                  "repeat": false
-                }
-              }
-            }
+            "label": "Link",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "allowText": true
+          }
+        }
+      },
+      "items": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "News Title",
+            "placeholder": ""
+          }
+        },
+        "text": {
+          "type": "Text",
+          "config": {
+            "label": "Text",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {}
           }
         },
         "link": {
           "type": "Link",
           "config": {
             "label": "Link",
-            "placeholder": "",
-            "select": null,
-            "allowTargetBlank": false,
-            "allowText": true,
-            "repeat": false
+            "allowTargetBlank": true,
+            "allowText": true
           }
         }
-      },
-      "items": {}
+      }
     }
   ]
 }
