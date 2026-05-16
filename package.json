@@ -15,9 +15,9 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
-    "@prismicio/client": "^7.17.2",
-    "@prismicio/next": "^2.0.1",
-    "@prismicio/react": "^3.2.1",
+    "@prismicio/client": "^7.21.8",
+    "@prismicio/next": "^2.2.4",
+    "@prismicio/react": "^3.4.1",
     "@slicemachine/manager": "^0.15.0",
     "@types/nodemailer": "^7.0.1",
     "clsx": "^2.1.1",
@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
-    "@slicemachine/adapter-next": "^0.3.61",
+    "@slicemachine/adapter-next": "^0.3.96",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/oxide-darwin-x64": "^4.3.0",
     "@tailwindcss/postcss": "^4.0.1",
@@ -46,7 +46,7 @@
     "postcss": "^8.5.1",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "slice-machine-ui": "^1.26.0",
+    "slice-machine-ui": "^2.21.3",
     "typescript": "^5.7.3"
   }
 }

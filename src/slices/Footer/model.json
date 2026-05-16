@@ -12,88 +12,137 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "phone_title": {
-          "type": "Text",
+        "phone": {
+          "type": "Group",
           "config": {
-            "label": "Phone Title",
-            "placeholder": ""
+            "label": "Phone",
+            "repeat": false,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "text": {
+                "type": "Text",
+                "config": {
+                  "label": "Text",
+                  "placeholder": ""
+                }
+              }
+            }
           }
         },
-        "phone_text": {
-          "type": "Text",
+        "email": {
+          "type": "Group",
           "config": {
-            "label": "Phone Text",
-            "placeholder": ""
+            "label": "Email",
+            "repeat": false,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "text": {
+                "type": "Text",
+                "config": {
+                  "label": "Text",
+                  "placeholder": ""
+                }
+              }
+            }
           }
         },
-
-        "email_title": {
-          "type": "Text",
+        "address": {
+          "type": "Group",
           "config": {
-            "label": "Email Title",
-            "placeholder": ""
+            "label": "Address",
+            "repeat": false,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "address1": {
+                "type": "Text",
+                "config": {
+                  "label": "Address1",
+                  "placeholder": ""
+                }
+              },
+              "address2": {
+                "type": "Text",
+                "config": {
+                  "label": "Address2",
+                  "placeholder": ""
+                }
+              }
+            }
           }
         },
-        "email_text": {
-          "type": "Text",
+        "socialMedia": {
+          "type": "Group",
           "config": {
-            "label": "Email Text",
-            "placeholder": ""
+            "label": "Social media",
+            "repeat": false,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": true
+                }
+              }
+            }
           }
         },
-
-        "address_title": {
-          "type": "Text",
+        "openingHours": {
+          "type": "Group",
           "config": {
-            "label": "Address Title",
-            "placeholder": ""
-          }
-        },
-        "address_line1": {
-          "type": "Text",
-          "config": {
-            "label": "Address Line 1",
-            "placeholder": ""
-          }
-        },
-        "address_line2": {
-          "type": "Text",
-          "config": {
-            "label": "Address Line 2",
-            "placeholder": ""
-          }
-        },
-
-        "social_links": {
-          "type": "Link",
-          "config": {
-            "label": "Social Links",
-            "placeholder": "",
-            "select": null,
-            "allowTargetBlank": true,
-            "allowText": true
-          }
-        },
-
-        "opening_title": {
-          "type": "Text",
-          "config": {
-            "label": "Opening Title",
-            "placeholder": ""
-          }
-        },
-        "hours1": {
-          "type": "Text",
-          "config": {
-            "label": "Hours 1",
-            "placeholder": ""
-          }
-        },
-        "hours2": {
-          "type": "Text",
-          "config": {
-            "label": "Hours 2",
-            "placeholder": ""
+            "label": "Opening hours",
+            "repeat": false,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "hours1": {
+                "type": "Text",
+                "config": {
+                  "label": "Hours1",
+                  "placeholder": ""
+                }
+              },
+              "hours2": {
+                "type": "Text",
+                "config": {
+                  "label": "Hours2",
+                  "placeholder": ""
+                }
+              }
+            }
           }
         }
       },
