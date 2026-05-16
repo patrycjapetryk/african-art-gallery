@@ -11,14 +11,15 @@ interface LanguageSwitcherProps {
     lang_name: string;
     url: string;
   }[];
+  lang: string;
 }
 
 type Props = ComponentProps<'div'> & LanguageSwitcherProps;
 
-export default function DesktopMenu({ className, locales, ...spread }: Props) {
+export default function DesktopMenu({ className, locales, lang, ...spread }: Props) {
   return (
     <div className={cn('flex w-full justify-end items-center', className)} {...spread}>
-      <Navigation />
+      <Navigation lang={lang} />
       <SearchBar />
       <SocialMediaNavigation />
       <LanguageSwitcher locales={locales} />

@@ -3,10 +3,14 @@ import { SliceZone } from '@prismicio/react';
 
 import { components } from '@/slices';
 
-export default async function Footer() {
+type Props = { lang: string };
+
+export default async function Footer({ lang }: Props) {
   const client = createClient();
 
-  const footer = await client.getSingle('footer');
+  const footer = await client.getSingle('footer', {
+    lang,
+  });
 
   return (
     <footer>

@@ -3,10 +3,14 @@ import { PrismicText } from '@prismicio/react';
 import { PrismicNextLink } from '@prismicio/next';
 import { createClient } from '@/prismicio';
 
-export default async function Navigation() {
+type Props = { lang: string };
+
+export default async function Navigation({ lang }: Props) {
   const client = createClient();
 
-  const navigation = await client.getSingle('navigation');
+  const navigation = await client.getSingle('navigation', {
+    lang,
+  });
 
   return (
     <nav className='flex w-full items-center justify-center'>

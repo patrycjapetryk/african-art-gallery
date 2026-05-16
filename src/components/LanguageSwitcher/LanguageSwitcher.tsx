@@ -18,13 +18,12 @@ const localeLabels = {
 
 export default function LanguageSwitcher({ locales }: LanguageSwitcherProps) {
   const pathname = usePathname();
-
   const currentLang = locales.find((locale) => pathname.startsWith(`/${locale.lang}`))?.lang;
 
   return (
     <ul className='w-36 flex justify-end gap-3 px-4 md:px-9'>
       {locales
-        .filter((locale) => locale.lang !== currentLang) // tylko inny język
+        .filter((locale) => locale.lang !== currentLang)
         .map((locale) => (
           <li key={locale.lang} className=''>
             <PrismicNextLink

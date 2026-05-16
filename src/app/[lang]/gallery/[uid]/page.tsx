@@ -5,8 +5,11 @@ import { SliceZone } from '@prismicio/react';
 
 import { createClient } from '@/prismicio';
 import { components } from '@/slices';
+import { getLocales } from '@/utils/getLocales';
+import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 
-type Params = { uid: string };
+type Params = Promise<{ uid: string; lang: string }>;
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { uid } = await params;
@@ -24,11 +27,31 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 }
 
 export default async function Page({ params }: { params: Promise<Params> }) {
-  const { uid } = await params;
+  const { uid, lang } = await params;
   const client = createClient();
-  const page = await client.getByUID('gallery', uid).catch(() => notFound());
 
-  return <SliceZone slices={page.data.slices} components={components} />;
+  const page = await client
+    .getByUID('gallery', uid, {
+      lang: (await params).lang,
+    })
+    .catch(() => notFound());
+
+  const locales = await getLocales(page, client);
+
+  return (
+    <>
+      <Header locales={locales} lang={lang} />
+      <SliceZone
+        slices={page.data.slices}
+        components={components}
+        // context={{
+        //   lang: { lang },
+        // }}
+      />
+      ;
+      <Footer lang={lang} />
+    </>
+  );
 }
 
 export async function generateStaticParams() {

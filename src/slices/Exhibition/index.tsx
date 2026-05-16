@@ -6,8 +6,13 @@ import type { SliceComponentProps } from '@prismicio/react';
 import { Bounded, Heading, Button } from '@/ui';
 
 export type ExhibitionProps = SliceComponentProps<Content.ExhibitionSlice>;
+// type Props = ExhibitionProps & {
+//   context: {
+//     lang: string;
+//   };
+// };
 
-const Exhibition: FC<ExhibitionProps> = ({ slice }) => {
+const Exhibition = ({ slice }: ExhibitionProps) => {
   const { backgroundImage, title, name, buttonLink, date } = slice.primary;
 
   return (

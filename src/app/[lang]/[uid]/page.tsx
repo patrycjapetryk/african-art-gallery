@@ -7,6 +7,7 @@ import { createClient } from '@/prismicio';
 import { components } from '@/slices';
 import { getLocales } from '@/utils/getLocales';
 import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 
 type Params = Promise<{ uid: string; lang: string }>;
 
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 }
 
 export default async function Page({ params }: { params: Params }) {
-  const { uid } = await params;
+  const { uid, lang } = await params;
   const client = createClient();
   const page = await client
     .getByUID('page', uid, {
@@ -38,8 +39,16 @@ export default async function Page({ params }: { params: Params }) {
 
   return (
     <>
-      <Header locales={locales} />
-      <SliceZone slices={page.data.slices} components={components} />;
+      <Header locales={locales} lang={lang} />
+      <SliceZone
+        slices={page.data.slices}
+        components={components}
+        // context={{
+        //   lang: { lang },
+        // }}
+      />
+      ;
+      <Footer lang={lang} />
     </>
   );
 }

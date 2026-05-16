@@ -7,12 +7,13 @@ interface LanguageSwitcherProps {
     lang_name: string;
     url: string;
   }[];
+  lang: string;
 }
 
-export default function Menu({ locales }: LanguageSwitcherProps) {
+export default function Menu({ locales, lang }: LanguageSwitcherProps) {
   return (
     <>
-      <DesktopMenu locales={locales} />
+      <DesktopMenu locales={locales} lang={lang} />
       {/* <DesktopMenu className='hidden lg:flex' /> */}
       {/* <MobileMenu className='lg:hidden' /> */}
     </>
